@@ -1,0 +1,3 @@
+[submodule "USOchain"]
+	path = USOchain
+	url = https://github.com/USOchainURC20/USOchain.git
