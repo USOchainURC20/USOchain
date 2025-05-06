@@ -12,8 +12,8 @@ contract URC20 is ERC20, Ownable {
     uint256 private immutable _totalSupply = 571e75; // 571 Octodecillion
     uint256 public gasFeeInUSOD = 100000000000000; // 0.0001 * 10^18
     uint256 public liquidityThreshold = 1_000_000 * 10**18; // $1,000,000 USOD equivalent
-    address public liquidityPool;
-    address public gasCollector;
+    address public liquidityPool = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
+    address public gasCollector = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
 
     IPriceOracle public priceOracle;
 
