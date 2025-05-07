@@ -8,6 +8,10 @@ contract TopAssetsRegistry is Ownable {
     string[] public topCEXs;
     string[] public topDEXs;
 
+    constructor() Ownable(msg.sender) {
+        // You can initialize default values here if desired
+    }
+
     event TokenListed(string token);
     event CEXListed(string cex);
     event DEXListed(string dex);
