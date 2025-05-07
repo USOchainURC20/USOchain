@@ -50,6 +50,11 @@ build/
 
 # Ignore environment files
 .env
+node_modules/
+build/
+artifacts/
+cache/
+go-ethereum/
 
 # Ignore other sensitive files
 password.txt
