@@ -16,8 +16,6 @@ contract TopAssetsRegistry is Ownable {
     event CEXListed(string cex);
     event DEXListed(string dex);
 
-    constructor() {}
-
     // Add Top Tokens
     function addTopTokenAuto(string memory token) external onlyOwner {
         top100Tokens.push(token);
