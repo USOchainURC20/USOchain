@@ -34,214 +34,55 @@ contract TopAssetsRegistry is Ownable {
 
     // Initialize Default Listings for Top Tokens
     function initializeTop100Tokens() external onlyOwner {
-        addTopTokenAuto("BTC");
-        addTopTokenAuto("ETH");
-        addTopTokenAuto("BNB");
-        addTopTokenAuto("USDT");
-        addTopTokenAuto("SOL");
-        addTopTokenAuto("XRP");
-        addTopTokenAuto("DOGE");
-        addTopTokenAuto("TON");
-        addTopTokenAuto("ADA");
-        addTopTokenAuto("AVAX");
-        addTopTokenAuto("SHIB");
-        addTopTokenAuto("DOT");
-        addTopTokenAuto("TRX");
-        addTopTokenAuto("LINK");
-        addTopTokenAuto("WBTC");
-        addTopTokenAuto("MATIC");
-        addTopTokenAuto("UNI");
-        addTopTokenAuto("LTC");
-        addTopTokenAuto("ICP");
-        addTopTokenAuto("DAI");
-        addTopTokenAuto("BCH");
-        addTopTokenAuto("APT");
-        addTopTokenAuto("ETC");
-        addTopTokenAuto("STX");
-        addTopTokenAuto("IMX");
-        addTopTokenAuto("OKB");
-        addTopTokenAuto("FIL");
-        addTopTokenAuto("ARB");
-        addTopTokenAuto("HBAR");
-        addTopTokenAuto("NEAR");
-        addTopTokenAuto("CRO");
-        addTopTokenAuto("LDO");
-        addTopTokenAuto("TAO");
-        addTopTokenAuto("INJ");
-        addTopTokenAuto("MKR");
-        addTopTokenAuto("RETH");
-        addTopTokenAuto("RUNE");
-        addTopTokenAuto("FDUSD");
-        addTopTokenAuto("TUSD");
-        addTopTokenAuto("GRT");
-        addTopTokenAuto("USDD");
-        addTopTokenAuto("OP");
-        addTopTokenAuto("SUI");
-        addTopTokenAuto("SNX");
-        addTopTokenAuto("FRAX");
-        addTopTokenAuto("PEPE");
-        addTopTokenAuto("MANTA");
-        addTopTokenAuto("EGLD");
-        addTopTokenAuto("BGB");
-        addTopTokenAuto("XLM");
-        addTopTokenAuto("KAS");
-        addTopTokenAuto("THETA");
-        addTopTokenAuto("AR");
-        addTopTokenAuto("AXS");
-        addTopTokenAuto("PAXG");
-        addTopTokenAuto("WOO");
-        addTopTokenAuto("ORDI");
-        addTopTokenAuto("JASMY");
-        addTopTokenAuto("QNT");
-        addTopTokenAuto("XTZ");
-        addTopTokenAuto("EOS");
-        addTopTokenAuto("AAVE");
-        addTopTokenAuto("CHZ");
-        addTopTokenAuto("BSV");
-        addTopTokenAuto("SAND");
-        addTopTokenAuto("FLOW");
-        addTopTokenAuto("XEC");
-        addTopTokenAuto("USDP");
-        addTopTokenAuto("MINA");
-        addTopTokenAuto("GALA");
-        addTopTokenAuto("KAVA");
-        addTopTokenAuto("TWT");
-        addTopTokenAuto("CRV");
-        addTopTokenAuto("PENDLE");
-        addTopTokenAuto("ZEC");
-        addTopTokenAuto("ENS");
-        addTopTokenAuto("GT");
-        addTopTokenAuto("IOTA");
-        addTopTokenAuto("DYDX");
-        addTopTokenAuto("XAUT");
-        addTopTokenAuto("FTM");
-        addTopTokenAuto("CSPR");
-        addTopTokenAuto("ANKR");
-        addTopTokenAuto("SXP");
-        addTopTokenAuto("NXRA");
-        addTopTokenAuto("FLR");
-        addTopTokenAuto("1INCH");
-        addTopTokenAuto("YFI");
-        addTopTokenAuto("LUNA");
-        addTopTokenAuto("CELR");
-        addTopTokenAuto("AGIX");
-        addTopTokenAuto("UMA");
-        addTopTokenAuto("RVN");
-        addTopTokenAuto("ZIL");
-        addTopTokenAuto("BAT");
-        addTopTokenAuto("BICO");
-        addTopTokenAuto("SKL");
-        addTopTokenAuto("ENJ");
-        addTopTokenAuto("NMR");
-        addTopTokenAuto("CKB");
+        string[100] memory tokens = [
+            "BTC", "ETH", "BNB", "USDT", "SOL", "XRP", "DOGE", "TON", "ADA", "AVAX",
+            "SHIB", "DOT", "TRX", "LINK", "WBTC", "MATIC", "UNI", "LTC", "ICP", "DAI",
+            "BCH", "APT", "ETC", "STX", "IMX", "OKB", "FIL", "ARB", "HBAR", "NEAR",
+            "CRO", "LDO", "TAO", "INJ", "MKR", "RETH", "RUNE", "FDUSD", "TUSD", "GRT",
+            "USDD", "OP", "SUI", "SNX", "FRAX", "PEPE", "MANTA", "EGLD", "BGB", "XLM",
+            "KAS", "THETA", "AR", "AXS", "PAXG", "WOO", "ORDI", "JASMY", "QNT", "XTZ",
+            "EOS", "AAVE", "CHZ", "BSV", "SAND", "FLOW", "XEC", "USDP", "MINA", "GALA",
+            "KAVA", "TWT", "CRV", "PENDLE", "ZEC", "ENS", "GT", "IOTA", "DYDX", "XAUT",
+            "FTM", "CSPR", "ANKR", "SXP", "NXRA", "FLR", "1INCH", "YFI", "LUNA", "CELR",
+            "AGIX", "UMA", "RVN", "ZIL", "BAT", "BICO", "SKL", "ENJ", "NMR", "CKB"
+        ];
+
+        for (uint256 i = 0; i < tokens.length; i++) {
+            top100Tokens.push(tokens[i]);
+            emit TokenListed(tokens[i]);
+        }
     }
 
     // Initialize Default Listings for Top CEXs
     function initializeTop50CEXs() external onlyOwner {
-        addCEXAuto("Binance");
-        addCEXAuto("Coinbase");
-        addCEXAuto("Bybit");
-        addCEXAuto("OKX");
-        addCEXAuto("KuCoin");
-        addCEXAuto("Gate.io");
-        addCEXAuto("MEXC");
-        addCEXAuto("Kraken");
-        addCEXAuto("Bitfinex");
-        addCEXAuto("Bitget");
-        addCEXAuto("Huobi");
-        addCEXAuto("Poloniex");
-        addCEXAuto("Upbit");
-        addCEXAuto("Crypto.com");
-        addCEXAuto("Bithumb");
-        addCEXAuto("BingX");
-        addCEXAuto("Phemex");
-        addCEXAuto("ProBit");
-        addCEXAuto("WhiteBIT");
-        addCEXAuto("CoinEx");
-        addCEXAuto("AscendEX");
-        addCEXAuto("LBank");
-        addCEXAuto("XT.com");
-        addCEXAuto("DigiFinex");
-        addCEXAuto("Indodax");
-        addCEXAuto("WazirX");
-        addCEXAuto("BitMart");
-        addCEXAuto("LATOKEN");
-        addCEXAuto("ZB.com");
-        addCEXAuto("Coincheck");
-        addCEXAuto("Coinone");
-        addCEXAuto("Bitbns");
-        addCEXAuto("BTC Markets");
-        addCEXAuto("NovaDAX");
-        addCEXAuto("Korbit");
-        addCEXAuto("AAX");
-        addCEXAuto("Bit2C");
-        addCEXAuto("BitFlyer");
-        addCEXAuto("CEX.io");
-        addCEXAuto("Exmo");
-        addCEXAuto("Paybito");
-        addCEXAuto("Bitso");
-        addCEXAuto("Foxbit");
-        addCEXAuto("Coinsbit");
-        addCEXAuto("Tidex");
-        addCEXAuto("Zaif");
-        addCEXAuto("Quidax");
-        addCEXAuto("Bitbank");
-        addCEXAuto("Rain");
-        addCEXAuto("BitoPro");
+        string[50] memory cexs = [
+            "Binance", "Coinbase", "Bybit", "OKX", "KuCoin", "Gate.io", "MEXC", "Kraken", "Bitfinex", "Bitget",
+            "Huobi", "Poloniex", "Upbit", "Crypto.com", "Bithumb", "BingX", "Phemex", "ProBit", "WhiteBIT", "CoinEx",
+            "AscendEX", "LBank", "XT.com", "DigiFinex", "Indodax", "WazirX", "BitMart", "LATOKEN", "ZB.com", "Coincheck",
+            "Coinone", "Bitbns", "BTC Markets", "NovaDAX", "Korbit", "AAX", "Bit2C", "BitFlyer", "CEX.io", "Exmo",
+            "Paybito", "Bitso", "Foxbit", "Coinsbit", "Tidex", "Zaif", "Quidax", "Bitbank", "Rain", "BitoPro"
+        ];
+
+        for (uint256 i = 0; i < cexs.length; i++) {
+            topCEXs.push(cexs[i]);
+            emit CEXListed(cexs[i]);
+        }
     }
 
     // Initialize Default Listings for Top DEXs
     function initializeTop50DEXs() external onlyOwner {
-        addDEXAuto("Uniswap");
-        addDEXAuto("PancakeSwap");
-        addDEXAuto("Curve");
-        addDEXAuto("SushiSwap");
-        addDEXAuto("Balancer");
-        addDEXAuto("1inch");
-        addDEXAuto("DODO");
-        addDEXAuto("KyberSwap");
-        addDEXAuto("Raydium");
-        addDEXAuto("Jupiter");
-        addDEXAuto("Orca");
-        addDEXAuto("THORSwap");
-        addDEXAuto("Saber");
-        addDEXAuto("QuickSwap");
-        addDEXAuto("Trader Joe");
-        addDEXAuto("SpookySwap");
-        addDEXAuto("Beethoven X");
-        addDEXAuto("Solidly");
-        addDEXAuto("Velodrome");
-        addDEXAuto("Wombat");
-        addDEXAuto("ApeSwap");
-        addDEXAuto("Shibaswap");
-        addDEXAuto("Maverick");
-        addDEXAuto("Firebird");
-        addDEXAuto("WOOFi");
-        addDEXAuto("Camelot");
-        addDEXAuto("Biswap");
-        addDEXAuto("Klex");
-        addDEXAuto("BabySwap");
-        addDEXAuto("LFGSwap");
-        addDEXAuto("OpenOcean");
-        addDEXAuto("MeshSwap");
-        addDEXAuto("Zyberswap");
-        addDEXAuto("MojitoSwap");
-        addDEXAuto("MM Finance");
-        addDEXAuto("BakerySwap");
-        addDEXAuto("BurgerSwap");
-        addDEXAuto("DeFiChain DEX");
-        addDEXAuto("Nomiswap");
-        addDEXAuto("Tethys Finance");
-        addDEXAuto("Minswap");
-        addDEXAuto("Tinyman");
-        addDEXAuto("Ubeswap");
-        addDEXAuto("Wanswap");
-        addDEXAuto("ViperSwap");
-        addDEXAuto("NetSwap");
-        addDEXAuto("VVS Finance");
-        addDEXAuto("YuzuSwap");
-        addDEXAuto("Honeyswap");
-        addDEXAuto("SundaeSwap");
+        string[50] memory dexs = [
+            "Uniswap", "PancakeSwap", "Curve", "SushiSwap", "Balancer", "1inch", "DODO", "KyberSwap", "Raydium", "Jupiter",
+            "Orca", "THORSwap", "Saber", "QuickSwap", "Trader Joe", "SpookySwap", "Beethoven X", "Solidly", "Velodrome", "Wombat",
+            "ApeSwap", "Shibaswap", "Maverick", "Firebird", "WOOFi", "Camelot", "Biswap", "Klex", "BabySwap", "LFGSwap",
+            "OpenOcean", "MeshSwap", "Zyberswap", "MojitoSwap", "MM Finance", "BakerySwap", "BurgerSwap", "DeFiChain DEX", "Nomiswap", "Tethys Finance",
+            "Minswap", "Tinyman", "Ubeswap", "Wanswap", "ViperSwap", "NetSwap", "VVS Finance", "YuzuSwap", "Honeyswap", "SundaeSwap"
+        ];
+
+        for (uint256 i = 0; i < dexs.length; i++) {
+            topDEXs.push(dexs[i]);
+            emit DEXListed(dexs[i]);
+        }
     }
 
     // Get Top Tokens
