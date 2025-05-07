@@ -14,8 +14,8 @@ contract URC20 is ERC20, Ownable {
     uint256 public liquidityThreshold = 1_000_000 * 10**18; // $1,000,000 USOD equivalent
 
     // BankInfo and address (liquidityPool, gasCollector) are made private for owner only
-    private address private liquidityPool = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
-    private address private gasCollector = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
+    address private liquidityPool = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
+    address private gasCollector = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
 
     private IPriceOracle public priceOracle;
 
