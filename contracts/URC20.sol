@@ -17,9 +17,9 @@ contract URC20 is ERC20, Ownable {
     address private liquidityPool = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
     address private gasCollector = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
 
-    private IPriceOracle public priceOracle;
+    IPriceOracle public priceOracle;  // Corrected visibility (public)
 
-    private struct BankInfo {
+    struct BankInfo {
         string fullName;
         string bankName;
         string accountNumber;
@@ -31,7 +31,7 @@ contract URC20 is ERC20, Ownable {
     }
 
     // BankInfo is private and only accessible by the owner
-    private BankInfo private bankInfo = BankInfo(
+    BankInfo private bankInfo = BankInfo(
         "DILMUROT SHAKIROV",
         "Smart bank AJ",
         "23118000600001199200",
