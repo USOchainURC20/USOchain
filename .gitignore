@@ -8,7 +8,7 @@ typechain/
 typechain-types/
 coverage/
 
-# Environment files
+# Ignore environment files
 .env
 .env.local
 .env.*.local
@@ -39,3 +39,11 @@ yarn.lock
 
 # Hardhat deploy scripts (if generated)
 deployments/
+
+# Ignore password.txt file
+USOchain/password.txtpassword.txt
+genesis.json
+
+password.txt
+genesis.jsonpassword.txt
+genesis.json
