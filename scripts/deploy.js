@@ -1,24 +1,16 @@
-const hre = require("hardhat");
-
 async function main() {
-  // Get the deployer's wallet/account
-  const [deployer] = await hre.ethers.getSigners();
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", deployer.address);
   
-  console.log("Deploying the contract using the account:", deployer.address);
-
-  // Compile and get the contract factory for URC20
-  const Token = await hre.ethers.getContractFactory("URC20");
-
-  // Deploy the contract (add constructor arguments if needed)
-  const token = await Token.deploy();
-
-  console.log("Token contract deployed at address:", token.address);
-}
-
-// Run the deployment script and handle errors
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error("Deployment failed:", error);
-    process.exit(1);
+    const USOD = await ethers.getContractFactory("URC20");
+    const priceOracleAddress = "0x0000000000000000000000000000000000000000"; // dummy oracle address
+    const usod = await USOD.deploy(priceOracleAddress);
+  
+    await usod.deployed();
+    console.log("USOD deployed to:", usod.address);
+  }
+  
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
   });
