@@ -41,4 +41,4 @@ deployments/
 # Sensitive files
 password.txt
 USOchain/password.txt
-genesis.json
+genesis.jsonscripts/
