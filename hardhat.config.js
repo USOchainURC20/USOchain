@@ -1,13 +1,13 @@
-require("dotenv").config();
-require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config(); // Load environment variables from the .env file
+require("@nomicfoundation/hardhat-toolbox"); // Hardhat toolbox which includes useful plugins
 
 module.exports = {
-  solidity: "0.8.20",  // Adjust Solidity version as needed
+  solidity: "0.8.20",  // Specifies the version of Solidity to be used in the project
   networks: {
-    mainnet: {
-      url: "https://usochain.urc",  // Your RPC URL
-      chainId: 571,  // Your Chain ID (replace with the actual one if different)
-      accounts: [`0x${process.env.PRIVATE_KEY}`],  // Your private key from .env file
+    usochain: {
+      url: "http://127.0.0.1:8545",  // RPC URL of the USOchain network (localhost in this case)
+      chainId: 571,  // Chain ID for the USOchain network
+      accounts: [`0x${process.env.PRIVATE_KEY}`],  // Private key fetched from the .env file for deploying contracts
     },
   },
 };

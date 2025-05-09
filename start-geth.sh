@@ -1,0 +1,1 @@
+geth --datadir ~/USOCHAIN/USOchain --networkid 571 --rpc --rpcaddr "0.0.0.0" --rpcport "8545" --rpcapi "db,eth,net,web3,personal" --mine --miner.threads=1 --etherbase 0xdd6342cD45CE437382C00523cc6F22968bdd21b8 --rpc.allowCORS=true --ipcpath ~/USOCHAIN/USOchain/geth.ipc --rpcvhosts "usochain.urc"

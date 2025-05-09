@@ -11,11 +11,17 @@
     "istanbulBlock": 0,
     "ethash": {}
   },
-  "difficulty": "1",
+  "difficulty": "0.93",
   "gasLimit": "30000000",
   "alloc": {
     "0xdd6342cD45CE437382C00523cc6F22968bdd21b8": {
-      "balance": "10000000000000000000000000000000000000000"
+      "balance": "571000000000000000000000"
     }
-  }
+  },
+  "block": {
+    "reward": "1",
+    "rewardInterval": "40",
+    "gasPrice": "0.02"
+  },
+  "timestamp": 0
 }
