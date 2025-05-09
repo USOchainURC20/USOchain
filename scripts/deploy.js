@@ -16,7 +16,7 @@ async function main() {
     const USOD = await hre.ethers.getContractFactory("URC20");
 
     // Define total supply (571 octodecillion with 6 decimals)
-    const totalSupply = hre.ethers.BigNumber.from("571000000000000000000000000000000000000000000000000000000000");
+    const totalSupply = hre.ethers.BigNumber.from("571000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
 
     // Deploy the contract
     const usod = await USOD.deploy(
@@ -29,7 +29,7 @@ async function main() {
     // Wait for the contract to be deployed
     await usod.deployed();
 
-    // If contract deployment is successful
+    // If contract deployment is successful, print contract address
     console.log("✅ USOD deployed to:", usod.address);
 
   } catch (error) {
