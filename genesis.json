@@ -1,0 +1,27 @@
+{
+  "config": {
+    "chainId": 571,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "istanbulBlock": 0,
+    "ethash": {}
+  },
+  "difficulty": "0x50000", 
+  "gasLimit": "0x2DC6C00",
+  "alloc": {
+    "0xdd6342cD45CE437382C00523cc6F22968bdd21b8": {
+      "balance": "571000000000000000000000000000"
+    }
+  },
+  "block": {
+    "reward": "1",
+    "rewardInterval": "40",
+    "gasPrice": "0.02"
+  },
+  "timestamp": "0x0"
+}

@@ -7,7 +7,7 @@ module.exports = {
     usochain: {
       url: "http://127.0.0.1:8545", // RPC URL
       chainId: 571, // Chain ID
-      accounts: [`0x${process.env.PRIVATE_KEY}`], // Private key from .env
+      accounts: [process.env.PRIVATE_KEY], // Private key from .env
     },
   },
 };
