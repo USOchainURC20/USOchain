@@ -58,3 +58,6 @@ go-ethereum/
 
 # Ignore other sensitive files
 password.txt
+
+# Ignore Geth local node files
+cmd/geth/
