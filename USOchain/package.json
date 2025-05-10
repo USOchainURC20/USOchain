@@ -1,0 +1,8 @@
+{
+  "name": "USOchain",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {}
+}
