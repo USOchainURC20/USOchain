@@ -1,0 +1,6 @@
+[submodule "USOchain"]
+	path = USOchain
+	url = https://github.com/USOchainURC20/USOchain.git
+[submodule "metamask-docs"]
+	path = metamask-docs
+	url = https://github.com/example/repo.git

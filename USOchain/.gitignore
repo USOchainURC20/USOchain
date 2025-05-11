@@ -1,0 +1,6 @@
+node_modules/
+data/
+keystore/
+*.log
+*.env
+secrets.json
