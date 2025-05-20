@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node modules
 node_modules/
 
@@ -62,3 +63,11 @@ data/
 *.swp
 *.swo
 *~
+=======
+node_modules/
+data/
+keystore/
+*.log
+*.env
+secrets.json
+>>>>>>> origin/main

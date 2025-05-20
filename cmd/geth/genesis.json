@@ -17,19 +17,6 @@
     "terminalTotalDifficulty": 1125899906842624,
     "ethash": {}
   },
-<<<<<<< HEAD
-  "difficulty": "0x50000",
-  "gasLimit": "0x2DC6C00",
-  "alloc": {
-    "0xdd6342cD45CE437382C00523cc6F22968bdd21b8": {
-      "balance": "0x1A74F2C9E0D2640000000000"
-    }
-  },
-  "block": {
-    "reward": 1,
-    "rewardInterval": 40,
-    "gasPrice": "0x4a817c800"
-=======
   "difficulty": "0x50000", 
   "gasLimit": "0x2DC6C00",
   "alloc": {
@@ -41,7 +28,6 @@
     "reward": "1",
     "rewardInterval": "40",
     "gasPrice": "0.02"
->>>>>>> origin/main
   },
   "timestamp": "0x0"
 }
