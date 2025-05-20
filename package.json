@@ -1,0 +1,23 @@
+{
+  "name": "usochain",
+  "version": "1.0.0",
+  "description": "USOchain – URC20 | USO USO is a USD-pegged Universal Stablecoin built for secure, fast, and stable payments. It powers the USO Blockchain with smart contract support, multichain bridges (ETH, Base, BNB), and $0.0001 gas fees. Ideal for global fiat-crypto integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^9.17.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.0",
+    "express": "^5.1.0",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.24.0"
+  }
+}
