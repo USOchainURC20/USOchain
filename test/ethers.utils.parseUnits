@@ -1,0 +1,36 @@
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("URC20 Token", function () {
+  let Token, token, owner, addr1;
+  let MockOracle, mockOracle;
+
+  beforeEach(async function () {
+    [owner, addr1] = await ethers.getSigners();
+
+    // Get the MockPriceOracle contract factory and deploy it
+    MockOracle = await ethers.getContractFactory("MockPriceOracle");
+    mockOracle = await MockOracle.deploy();
+    await mockOracle.deployed();
+
+    // Deploy the URC20 contract with the address of the deployed mockOracle
+    Token = await ethers.getContractFactory("URC20");
+    token = await Token.deploy(mockOracle.address);
+    await token.deployed();
+  });
+
+  it("should assign total supply to the owner", async function () {
+    // Get the balance of the owner
+    const ownerBalance = await token.balanceOf(owner.address);
+
+    // Define the expected total supply (using ethers.utils.parseUnits with 6 decimals)
+    const totalSupply = ethers.utils.parseUnits("5710000000000000000000000000000000000000000000000000000", 6);
+
+    // Assert that the owner's balance equals the total supply
+    expect(ownerBalance).to.equal(totalSupply);
+    MockOracle = await ethers.getContractFactory("MockPriceOracle");
+mockOracle = await MockOracle.deploy();
+console.log("MockOracle instance:", mockOracle);
+
+  });
+});

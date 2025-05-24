@@ -10,8 +10,8 @@ interface IPriceOracle {
 
 contract URC20 is ERC20, Ownable {
     uint8 private constant DECIMALS = 6;
-    uint256 private immutable _totalSupply = 571 * 10**63; // 571e57 with 6 decimals
-    uint256 public gasFeeInUSOD = 100000000000; // 0.0001 * 10^6
+    uint256 private immutable _totalSupply = 571 * 10**(57 + 6); // 571 octodecillion with 6 decimals
+    uint256 public gasFeeInUSOD = 100; // 0.0001 USOD (with 6 decimals)
     uint256 public liquidityThreshold = 1_000_000 * 10**6; // $1,000,000 USOD
 
     address private liquidityPool = 0xdd6342cD45CE437382C00523cc6F22968bdd21b8;
@@ -95,7 +95,7 @@ contract URC20 is ERC20, Ownable {
 
     function updateGasFeeFromOracle() external onlyOwner {
         uint256 ethPrice = priceOracle.getLatestPrice();
-        gasFeeInUSOD = (1e14 * 1e18) / ethPrice;
+        gasFeeInUSOD = (1e20) / ethPrice;
     }
 
     function setGasCollector(address newCollector) external onlyOwner {
