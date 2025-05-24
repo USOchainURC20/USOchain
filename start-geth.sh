@@ -1,6 +1,6 @@
 #!/bin/bash
 geth --datadir ~/g/GethData \
-  --networkid 1991 \
+  --networkid 571 \
   --http \
   --http.addr "0.0.0.0" \
   --http.port 8545 \
