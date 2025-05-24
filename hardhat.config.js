@@ -1,13 +1,14 @@
+require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
 require("dotenv").config();
 
 module.exports = {
-  defaultNetwork: "usochain",
+  solidity: "0.8.20",
   networks: {
     usochain: {
-      url: "https://rpc.metachain.io",
+      url: process.env.RPC_URL,
+      accounts: [process.env.PRIVATE_KEY].filter(Boolean),
       chainId: 571,
-      accounts: [process.env.PRIVATE_KEY],
     },
   },
-  solidity: "0.8.20",
 };
