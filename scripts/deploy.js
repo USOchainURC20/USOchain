@@ -9,7 +9,7 @@ async function main() {
     const balance = await deployer.getBalance();
     console.log("Account balance:", hre.ethers.utils.formatEther(balance));
 
-    const USOD = await hre.ethers.getContractFactory("URC20"); // Contract name
+    const USOD = await hre.ethers.getContractFactory("URC20");
     const totalSupply = hre.ethers.BigNumber.from("571000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
 
     const usod = await USOD.deploy(
@@ -27,4 +27,7 @@ async function main() {
   }
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

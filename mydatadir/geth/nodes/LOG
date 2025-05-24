@@ -1,0 +1,6 @@
+=============== May 24, 2025 (+05) ===============
+21:46:31.874694 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:46:31.878692 db@open opening
+21:46:31.880689 version@stat F·[] S·0B[] Sc·[]
+21:46:31.881689 db@janitor F·2 G·0
+21:46:31.881689 db@open done T·2.9977ms

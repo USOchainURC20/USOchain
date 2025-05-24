@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 #!/bin/bash
->>>>>>> origin/main
 geth --datadir ~/g/GethData \
-  --networkid 571 \
+  --networkid 1991 \
   --http \
   --http.addr "0.0.0.0" \
   --http.port 8545 \
