@@ -1,14 +1,24 @@
-require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-ethers");
+require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
 module.exports = {
-  solidity: "0.8.20",
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.20",
+      },
+    ],
+  },
   networks: {
-    usochain: {
-      url: process.env.RPC_URL,
+    localhost: {
+      url: "http://127.0.0.1:8545",
+      chainId: 31337, // default chainId for localhost network
       accounts: [process.env.PRIVATE_KEY].filter(Boolean),
+    },
+    usochain: {
+      url: "http://usochain.urc:8545",
       chainId: 571,
+      accounts: [process.env.PRIVATE_KEY].filter(Boolean),
     },
   },
 };
