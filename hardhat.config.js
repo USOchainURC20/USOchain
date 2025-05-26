@@ -17,7 +17,7 @@ module.exports = {
     },
     usochain: {
       url: "http://usochain.urc:8545",
-      chainId: 571,
+      chainId: 1991,
       accounts: [process.env.PRIVATE_KEY].filter(Boolean),
     },
   },
