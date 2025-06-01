@@ -1,3 +1,11 @@
+node_modules
+.DS_Store
+packages/*/node_modules
+packages/*/.DS_Store
+packages/*/dist
+packages/*/.env
+packages/*/.turbo
+packages/*/coverage
 # 🔒 Sensitive information
 .env
 .env.local
