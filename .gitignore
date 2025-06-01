@@ -91,3 +91,4 @@ password.txt
 *.env
 *.key
 *.pem
+password.txt
