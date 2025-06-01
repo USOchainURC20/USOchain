@@ -1,0 +1,93 @@
+# 🔒 Sensitive information
+.env
+.env.local
+.env.*.local
+*.secret
+*.key
+*.pem
+*.crt
+*.pfx
+*.cert
+
+# ⚙️ Ethereum / Geth data directories
+data/
+usochain-data/
+chaindata/
+lightchaindata/
+geth/
+keystore/
+nodes/
+logs/
+*.log
+
+# 🛠 Build artifacts (Remix, Hardhat, Truffle, Foundry)
+build/
+artifacts/
+cache/
+out/
+typechain/
+types/
+abis/
+coverage/
+dist/
+gas-snapshots/
+
+# 📦 Node.js dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 📄 OS and IDE generated files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+.idea/
+.vscode/
+*.code-workspace
+
+# 🔍 Test results
+coverage/
+test-results/
+jest-test-results.json
+
+# 🔧 Docker and other services
+docker-compose.override.yml
+.docker/
+*.pid
+
+# 🔐 Wallet and database files
+*.ldb
+*.ldb-journal
+*.bin
+*.wallet
+
+# 🧪 Ganache-related
+*.chain
+*.history
+
+# 📁 Terminal and history files
+.history
+bash_history
+.zsh_history
+*.pid
+
+# 🔄 Git control files (optional)
+.gitignore
+.gitattributes
+
+# 🧪 Miscellaneous
+*.tgz
+*.tar.gz
+*.zip
+*.bak
+*.old
+
+password.txt
+*.env
+*.key
+*.pem
