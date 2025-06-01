@@ -1,17 +1,18 @@
-const { ethers } = require("hardhat");
+const hre = require("hardhat");
+const { ethers } = hre;
 
 async function main() {
   const [deployer] = await ethers.getSigners();
   console.log("Deploying contracts with the account:", deployer.address);
 
-  const balance = await ethers.provider.getBalance(deployer.address);
-  console.log("Account balance:", ethers.utils.formatEther(balance), "USOD");
+  const dummyPriceOracle = deployer.address;
 
-  const Token = await ethers.getContractFactory("URC20");
-  const token = await Token.deploy();
-  await token.deployed();
+  const URC20 = await ethers.getContractFactory("URC20");
+  const urc20 = await URC20.deploy(dummyPriceOracle);
 
-  console.log("URC20 deployed to:", token.address);
+  await urc20.deployed();
+
+  console.log("URC20 deployed to:", urc20.address);
 }
 
 main()
